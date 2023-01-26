@@ -1,0 +1,2 @@
+# ComparetheTriplets
+ HackerRank Solution
