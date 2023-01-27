@@ -22,15 +22,15 @@ class Result {
 
     public static int diagonalDifference(List<List<Integer>> arr) {
     // Write your code here
-    	Integer ltr = 0;
-    	Integer rtl = 0;
-    	int row = arr.size();
-    	int col = arr.get(0).size();
+    	Integer ltr = 0; //Set Sum of Integer from left to right diagonal to 0
+    	Integer rtl = 0; //Set Sum of Integer from right to left diagonal to 0
+    	int row = arr.size(); // total rows of List
+    	int col = arr.get(0).size(); // total columns of a row
     	for (int i = 0; i < row; i++) {
-			ltr += arr.get(i).get(i);
-			rtl += arr.get(i).get((col-1)-i);
+			ltr += arr.get(i).get(i); // get value at row i, column i then sum up 
+			rtl += arr.get(i).get((col-1)-i); // get value at row i, column (col-1)-i then sum up
 		}
-    	return Math.abs(ltr - rtl);
+    	return Math.abs(ltr - rtl); // returns the absolute value of subtraction ltr and rtl 
     }
 
 }
