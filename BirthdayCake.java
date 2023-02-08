@@ -23,20 +23,20 @@ class Result {
     // Write your code here
                 // Write your code here
         int size = candles.size();
-        int max = candles.get(0);
-        int count = 0;
+        int max = candles.get(0); // let max as a first Integer in List
+        int count = 0; // count the maximum number in List
         for (int i = 0; i < size; i++) {
-            if (max < candles.get(i)) {
-                max = candles.get(i);
+            if (max < candles.get(i)) { // check if there is any Integer in List is greater than max
+                max = candles.get(i); // then let max as that Integer
             }
         }
         System.out.println("Max of the List: " + max);
-        for (int i = 0; i < size; i++) {
-            if(max == candles.get(i)) {
-                count++;
+        for (int i = 0; i < size; i++) { 
+            if(max == candles.get(i)) { // check if Any number is equal to Max 
+                count++; // then count up
             }
         }
-        return count;
+        return count; // return how many times maximum number appears in the List.
     }
 
 }
